@@ -9,10 +9,6 @@ export default function StackSection() {
           <Label>Stack</Label>
           <Title>기술 스택</Title>
         </div>
-        <Desc>
-          기술을 잘게 쪼개서 나열하는 대신, 역할 기준으로 크게 묶어서 한눈에
-          보이도록 정리했습니다.
-        </Desc>
       </Top>
 
       <StackGrid>

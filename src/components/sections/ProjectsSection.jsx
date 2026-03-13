@@ -8,13 +8,9 @@ export default function ProjectsSection() {
     <Section id="projects">
       <Top>
         <div>
-          <Label>Selected Works</Label>
-          <Title>진행했던 프로젝트</Title>
+          <Label>Projects</Label>
+          <Title>프로젝트</Title>
         </div>
-        <Description>
-          대표작은 깊이 있게, 보조 프로젝트는 빠르게 이해되도록 정보 밀도를
-          조절한 구성입니다.
-        </Description>
       </Top>
 
       <List>
