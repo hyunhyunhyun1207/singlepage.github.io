@@ -30,40 +30,34 @@ export default function SiteHeader() {
 
 const Header = styled.header`
   position: sticky;
-  top: 0;
+  top: 20px;
   z-index: 30;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Inner = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(20px);
   box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
-  padding: 12px 16px;
-`;
-
-const Inner = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 16px;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 `;
 
 const RightArea = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 12px;
-  width: 100%;
 
   @media (max-width: 900px) {
-    width: 100%;
-    justify-content: flex-end;
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 `;
 

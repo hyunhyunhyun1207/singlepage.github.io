@@ -27,7 +27,7 @@ export default function HeroSection() {
 const Section = styled.section`
   display: block;
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   scroll-margin-top: 100px;
 `;
 
