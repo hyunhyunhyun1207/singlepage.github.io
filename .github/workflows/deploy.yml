@@ -33,11 +33,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./singlepage-hyun
 
       - name: Build
         run: npm run build
-        working-directory: ./singlepage-hyun
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -45,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./singlepage-hyun/dist
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
