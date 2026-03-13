@@ -12,14 +12,9 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <Badge>
-          <Dot />
-          Meta-inspired Portfolio Concept
-        </Badge>
-
         <TextGroup>
           <Headline>
-            <Accent>몰입감 있는</Accent>
+            <Accent>Idea to Flow</Accent>
             <br />
             개인 포트폴리오 SPA
           </Headline>
@@ -28,18 +23,6 @@ export default function HeroSection() {
             확인할 수 있도록 구성했습니다.
           </Description>
         </TextGroup>
-
-        <ButtonRow>
-          <SecondaryButton
-            as="a"
-            href={siteConfig.githubUrl}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span>GitHub 연결</span>
-            <Github size={16} />
-          </SecondaryButton>
-        </ButtonRow>
       </Left>
     </Section>
   );
@@ -53,7 +36,7 @@ const Left = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 920px;
+  margin: 150px 200px;
 `;
 
 const Badge = styled.div`
@@ -80,6 +63,8 @@ const TextGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
+  text-align: center;
 `;
 
 const Headline = styled.h2`

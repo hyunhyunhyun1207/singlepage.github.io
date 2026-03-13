@@ -45,7 +45,7 @@ export const projects = [
     subtitle: "콘텐츠 중심 블로그형 프로젝트",
     description:
       "카테고리, 게시글, 댓글, 이미지 구조를 바탕으로 CRUD와 화면 흐름을 정리한 블로그 형식 프로젝트입니다.",
-    tech: ["React", "Java", "JPA", "Oracle DB"],
+    tech: ["HTML", "CSS", "JS", "Java", "JDBC", "Oracle DB"],
     type: "card",
     status: "콘텐츠 서비스",
     githubUrl: "https://github.com/Post-it-blog/post-it",

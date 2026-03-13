@@ -12,7 +12,6 @@ export default function SiteHeader() {
             <Layers3 size={20} />
           </LogoBox>
           <BrandText>
-            <Label>PORTFOLIO</Label>
             <Title>{siteConfig.portfolioTitle}</Title>
           </BrandText>
         </Brand>
