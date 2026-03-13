@@ -24,6 +24,7 @@ export default function ProjectsSection() {
 
 const Section = styled.section`
   margin-top: 96px;
+  scroll-margin-top: 100px;
 `;
 
 const Top = styled.div`

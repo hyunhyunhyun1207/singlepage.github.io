@@ -52,6 +52,7 @@ export default function StackSection() {
 const Section = styled.section`
   margin-top: 96px;
   margin-bottom: 150px;
+  scroll-margin-top: 100px;
 `;
 
 const Top = styled.div`

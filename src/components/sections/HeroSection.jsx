@@ -28,6 +28,7 @@ const Section = styled.section`
   display: block;
   margin-top: 150px;
   margin-bottom: 150px;
+  scroll-margin-top: 100px;
 `;
 
 const Left = styled(motion.div)`
