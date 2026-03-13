@@ -44,7 +44,7 @@ const Header = styled.header`
 const Inner = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
 
   @media (max-width: 900px) {
@@ -53,47 +53,16 @@ const Inner = styled.div`
   }
 `;
 
-const Brand = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`;
-
-const LogoBox = styled.div`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  border: 1px solid #bae6fd;
-  background: #ecfeff;
-  color: #0e7490;
-`;
-
-const BrandText = styled.div``;
-
-const Label = styled.p`
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--text-muted);
-`;
-
-const Title = styled.h1`
-  margin: 4px 0 0;
-  font-size: 16px;
-  font-weight: 600;
-`;
-
 const RightArea = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
+  width: 100%;
 
   @media (max-width: 900px) {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
   }
 `;
