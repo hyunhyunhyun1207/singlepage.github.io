@@ -24,8 +24,7 @@ export default function HeroSection() {
             개인 포트폴리오 SPA
           </Headline>
           <Description>
-            상단에서는 포트폴리오의 분위기와 대표 프로젝트의 방향성을 보여주고,
-            실제 프로젝트 결과물은 아래 섹션에서 PDF, 영상, GitHub 링크 중심으로
+            프로젝트 결과물은 아래 섹션에서 PDF, 영상, GitHub 링크 중심으로
             확인할 수 있도록 구성했습니다.
           </Description>
         </TextGroup>

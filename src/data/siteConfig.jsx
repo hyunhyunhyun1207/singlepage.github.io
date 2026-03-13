@@ -1,4 +1,4 @@
 export const siteConfig = {
   githubUrl: "https://github.com/hyunhyunhyun1207",
-  portfolioTitle: "Hyunsoo Creative Archive",
+  portfolioTitle: "Archive",
 };

@@ -26,8 +26,6 @@ export default function AboutSection() {
       <MainCard>
         <SectionLabel>About</SectionLabel>
         <Title>개발 경험을 화면에서 바로</Title>
-
-        <Description></Description>
       </MainCard>
 
       <Grid>
