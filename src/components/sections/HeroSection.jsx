@@ -50,13 +50,7 @@ export default function HeroSection() {
       >
         <PreviewOuter>
           <PreviewInner>
-            <PreviewTop>
-              <div>
-                <PreviewLabel>Featured Preview</PreviewLabel>
-                <PreviewTitle>MES Showcase Frame</PreviewTitle>
-              </div>
-              <MiniBadge>VIDEO READY</MiniBadge>
-            </PreviewTop>
+            <PreviewTop></PreviewTop>
 
             <VideoMock>
               <VideoGrid />

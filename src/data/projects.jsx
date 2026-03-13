@@ -1,3 +1,5 @@
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const projects = [
   {
     title: "MES for Battery Manufacturing",
@@ -16,8 +18,8 @@ export const projects = [
     status: "대표 프로젝트",
     mediaLabel: "프로젝트 시연 영상",
     githubUrl: "https://github.com/mes-team-2",
-    pdfUrl: "/files/mes-project.pdf",
-    videoUrl: "/files/mes-demo.mp4",
+    pdfUrl: `${BASE_URL}files/(최종 발표) 2조 Z-zone Battery.pdf`,
+    videoUrl: `${BASE_URL}files/new_2조.mp4`,
   },
   {
     title: "Realtime Auction Platform",
@@ -36,7 +38,7 @@ export const projects = [
     type: "card",
     status: "실시간 서비스",
     githubUrl: "https://github.com/ycj3294-glitch/zubzub_react",
-    pdfUrl: "/files/auction-project.pdf",
+    pdfUrl: `${BASE_URL}files/양1이4-최종-발표-자료.pdf`,
   },
   {
     title: "Blog Platform",
@@ -46,7 +48,7 @@ export const projects = [
     tech: ["React", "Java", "JPA", "Oracle DB"],
     type: "card",
     status: "콘텐츠 서비스",
-    githubUrl: "https://github.com/your-github-id/blog-project",
-    pdfUrl: "/files/blog-project.pdf",
+    githubUrl: "https://github.com/Post-it-blog/post-it",
+    pdfUrl: `${BASE_URL}files/2조 POST-IT.pdf`,
   },
 ];

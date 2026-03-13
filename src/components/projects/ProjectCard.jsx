@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import { FileText, Github, PlayCircle } from "lucide-react";
 
 export default function ProjectCard({ project, idx }) {
+  const pdfPreviewUrl = project.pdfUrl
+    ? `${project.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`
+    : "";
+
   return (
     <MotionWrap
       initial={{ opacity: 0, y: 20 }}
@@ -63,30 +67,38 @@ export default function ProjectCard({ project, idx }) {
           <Right>
             {project.type === "featured" ? (
               <FeaturedMedia>
-                <div>
-                  <PlayCircle size={56} />
-                  <MediaTitle>{project.mediaLabel}</MediaTitle>
-                  <MediaDesc>
-                    MES 프로젝트는 영상과 PDF 자료를 함께 확인할 수 있습니다.
-                  </MediaDesc>
-                </div>
+                {project.videoUrl ? (
+                  <VideoBox
+                    src={project.videoUrl}
+                    controls
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  <FallbackBox>
+                    <PlayCircle size={56} />
+                    <MediaTitle>{project.mediaLabel}</MediaTitle>
+                    <MediaDesc>
+                      영상 파일을 연결하면 이 영역에 미리보기가 표시됩니다.
+                    </MediaDesc>
+                  </FallbackBox>
+                )}
               </FeaturedMedia>
             ) : (
               <SnapshotArea>
                 <SnapshotCard>
                   <SnapshotLabel>Project Document</SnapshotLabel>
-                  <SnapshotBox />
+
+                  {project.pdfUrl ? (
+                    <PdfFrame
+                      src={pdfPreviewUrl}
+                      title={`${project.title} PDF Preview`}
+                    />
+                  ) : (
+                    <SnapshotBox />
+                  )}
                 </SnapshotCard>
-                <MiniGrid>
-                  <MiniCard>
-                    <MiniLabel>자료 형태</MiniLabel>
-                    <MiniValue>PDF</MiniValue>
-                  </MiniCard>
-                  <MiniCard>
-                    <MiniLabel>구성</MiniLabel>
-                    <MiniValue>Summary</MiniValue>
-                  </MiniCard>
-                </MiniGrid>
               </SnapshotArea>
             )}
           </Right>
@@ -222,6 +234,20 @@ const SecondaryLink = styled(LinkBase)`
 `;
 
 const FeaturedMedia = styled.div`
+  min-height: 260px;
+`;
+
+const VideoBox = styled.video`
+  width: 100%;
+  min-height: 260px;
+  border-radius: 26px;
+  border: 1px solid #d9e6f5;
+  background: #000;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+`;
+
+const FallbackBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,34 +294,19 @@ const SnapshotLabel = styled.p`
   color: #94a3b8;
 `;
 
+const PdfFrame = styled.iframe`
+  width: 100%;
+  height: 320px;
+  margin-top: 16px;
+  border: 1px solid #dbe4f0;
+  border-radius: 20px;
+  background: #fff;
+`;
+
 const SnapshotBox = styled.div`
-  height: 128px;
+  height: 320px;
   margin-top: 16px;
   border-radius: 20px;
   border: 1px dashed #cbd5e1;
   background: linear-gradient(135deg, #ecfeff, #ffffff);
-`;
-
-const MiniGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-`;
-
-const MiniCard = styled.div`
-  padding: 16px;
-  border-radius: 24px;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-`;
-
-const MiniLabel = styled.p`
-  margin: 0;
-  font-size: 12px;
-  color: #94a3b8;
-`;
-
-const MiniValue = styled.p`
-  margin: 10px 0 0;
-  font-weight: 500;
 `;
