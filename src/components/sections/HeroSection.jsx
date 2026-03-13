@@ -18,10 +18,6 @@ export default function HeroSection() {
             <br />
             개인 포트폴리오 SPA
           </Headline>
-          <Description>
-            프로젝트 결과물은 아래 섹션에서 PDF, 영상, GitHub 링크 중심으로
-            확인할 수 있도록 구성했습니다.
-          </Description>
         </TextGroup>
       </Left>
     </Section>
@@ -30,13 +26,14 @@ export default function HeroSection() {
 
 const Section = styled.section`
   display: block;
+  margin-top: 150px;
+  margin-bottom: 150px;
 `;
 
 const Left = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin: 150px 200px;
 `;
 
 const Badge = styled.div`
@@ -69,7 +66,6 @@ const TextGroup = styled.div`
 
 const Headline = styled.h2`
   margin: 0;
-  max-width: 860px;
   font-size: clamp(42px, 7vw, 72px);
   line-height: 1.08;
   letter-spacing: -0.04em;

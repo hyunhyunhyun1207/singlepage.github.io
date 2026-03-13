@@ -23,11 +23,6 @@ export default function AboutSection() {
 
   return (
     <Section id="about">
-      <MainCard>
-        <SectionLabel>About</SectionLabel>
-        <Title>개발 경험을 화면에서 바로</Title>
-      </MainCard>
-
       <Grid>
         {items.map((item) => (
           <SubCard key={item.title}>
@@ -41,10 +36,10 @@ export default function AboutSection() {
 }
 
 const Section = styled.section`
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  display: flex;
   gap: 24px;
   margin-top: 80px;
+  padding: 20px 0 40px;
 
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
@@ -59,14 +54,13 @@ const CardBase = styled.div`
   box-shadow: var(--shadow);
 `;
 
-const MainCard = styled(CardBase)`
-  padding: 28px;
-`;
-
 const Grid = styled.div`
+  width: 100%;
+  max-width: 1080px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 28px;
+  margin: 0 auto;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -74,35 +68,19 @@ const Grid = styled.div`
 `;
 
 const SubCard = styled(CardBase)`
-  padding: 24px;
-`;
-
-const SectionLabel = styled.p`
-  margin: 0 0 12px;
-  font-size: 13px;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: #94a3b8;
-`;
-
-const Title = styled.h3`
-  margin: 0;
-  font-size: 32px;
-`;
-
-const Description = styled.p`
-  margin: 16px 0 0;
-  line-height: 1.8;
-  color: var(--text-soft);
+  min-height: 240px;
+  padding: 36px;
 `;
 
 const SubTitle = styled.h4`
   margin: 0;
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 1.4;
 `;
 
 const SubDesc = styled.p`
-  margin: 12px 0 0;
-  line-height: 1.7;
+  margin: 22px 0 0;
+  font-size: 17px;
+  line-height: 1.8;
   color: var(--text-soft);
 `;

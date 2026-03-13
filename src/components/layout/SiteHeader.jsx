@@ -7,15 +7,6 @@ export default function SiteHeader() {
   return (
     <Header>
       <Inner>
-        <Brand>
-          <LogoBox>
-            <Layers3 size={20} />
-          </LogoBox>
-          <BrandText>
-            <Title>{siteConfig.portfolioTitle}</Title>
-          </BrandText>
-        </Brand>
-
         <RightArea>
           <Nav>
             <NavLink href="#about">About</NavLink>
